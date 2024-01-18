@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $verifyPassword = $_POST['verifyPassword'];
- 
+
     // Validate the data
     if ($password != $verifyPassword) {
         echo "Las contraseñas no coinciden. Por favor, inténtalo de nuevo.";
@@ -26,7 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = "INSERT INTO usuario (nombres, apellidos, correo, passwd) VALUES ('$firstName', '$lastName', '$email', '$hashedPassword')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Usuario registrado exitosamente";
+        // Registro exitoso, redirige a la página de confirmación
+        header("Location: confirmacion_registro.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
