@@ -87,11 +87,20 @@ function generarPreguntas() {
 }
 
 function seleccionarRespuesta(respuesta) {
+    // Desactiva la clase seleccionada de todos los botones
+    var botones = document.querySelectorAll('.btn-primary');
+    botones.forEach(boton => boton.classList.remove('selected-answer'));
+
+    // Asigna la clase seleccionada al botón actual
     respuestaSeleccionada = respuesta;
+    var botonSeleccionado = Array.from(botones).find(boton => boton.textContent === respuestaSeleccionada);
+    botonSeleccionado.classList.add('selected-answer');
 }
+
 
 function verificarRespuesta() {
     var preguntaActual = preguntasJSON[indicePreguntaActual];
+    var botones = document.querySelectorAll('.btn-primary');
 
     if (respuestaSeleccionada === preguntaActual.respuesta1c) {
         alert("¡Respuesta correcta!");
@@ -108,7 +117,11 @@ function verificarRespuesta() {
         alert("Respuesta incorrecta. Inténtalo de nuevo.");
         // Puedes agregar más lógica aquí, como reiniciar el juego o mostrar la respuesta correcta, según tus necesidades.
     }
+
+    // Desactiva la clase seleccionada de todos los botones después de verificar la respuesta
+    botones.forEach(boton => boton.classList.remove('selected-answer'));
 }
+
 
 function actualizarBarraDeProgreso() {
     var barraDeProgreso = document.querySelector('.progress-bar');
