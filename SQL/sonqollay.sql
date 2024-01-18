@@ -38,9 +38,9 @@ CREATE TABLE usuario(
     nombres varchar(300) not null,
     apellidos varchar(300) not null,
     correo varchar(300) not null,
-    password varchar(300) not null
+    passwd varchar(300) not null
 );
-INSERT INTO usuario(nombres, apellidos, correo, password) VALUES
+INSERT INTO usuario(nombres, apellidos, correo, passwd) VALUES
     ('sonqollay','sonqollay','sonqollay','sonqollay');
 
 INSERT INTO liderazgo(pregunta, respuesta1c, respuesta2, respuesta3, respuesta4) VALUES
