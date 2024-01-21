@@ -1,9 +1,10 @@
 <?php
 // Incluye el archivo de conexión a la base de datos
-include 'coneccion.php';
+
 
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include 'coneccion.php';
     // Recuperar los datos del formulario
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -19,8 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['passwd'])) {
-            // Credenciales válidas, redirigir o realizar alguna acción
-            header("Location: usuario.html");
+            // Credenciales válidas, iniciar la sesión y guardar el ID
+            session_start();
+            $_SESSION['user_id'] = $row['id'];
+
+            // Redirigir a la página del usuario
+            header("Location: usuario.php");
             exit();
         } else {
             // Credenciales inválidas, mostrar mensaje de error
