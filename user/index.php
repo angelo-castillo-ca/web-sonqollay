@@ -123,7 +123,15 @@ include 'session.php';
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4" style="text-align: center;">Bienvenido "Usuario"</h3>
+                    <h3 class="text-dark mb-4" style="text-align: center;">
+                    Bienvenido
+                    <span class="d-none d-lg-inline me-2 text-gray-600 small">
+                            <?php
+                                $nombre_completo = $_SESSION['nombre_completo_usuario'] ?? '';
+                                echo htmlspecialchars($nombre_completo)
+                            ?>
+                        </span> 
+                    </h3>
                 </div>
                 <section class="clean-block features">
                     <div class="container py-4 py-xl-5" style="display: block;">
