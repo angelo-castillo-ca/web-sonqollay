@@ -19,6 +19,9 @@
 <body id="page-top">
     <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light" style="background: rgb(52,131,225);">
         <div class="container-fluid"><a href="index.html"><img class="img-fluid" src="assets/img/sonqollay.png" width="171" height="29"></a>
+            <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Buscar"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+            </form>
             <ul class="navbar-nav flex-nowrap ms-auto">
                 <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
                     <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
@@ -110,66 +113,134 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4" style="text-align: center;">Bienvenido "Usuario"</h3>
-                </div>
-                <section class="clean-block features">
-                    <div class="container py-4 py-xl-5" style="display: block;">
-                        <section style="padding-top: 40px;">
-                            <div class="container" style="text-align: center;">
-                                <h1>Modulos</h1>
-                            </div>
-                            <div class="row justify-content-center" style="margin-right: 0px;margin-left: 0px;">
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/ÍCONOS/LIDERAZGO_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Liderazgo</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/ÍCONOS/EMPATÍA_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Empatia</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/ÍCONOS/RESILIENCIA_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Resiliencia</h4>
-                                        </div>
-                                    </div>
+                    <h3 class="text-dark mb-4">Perfil</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/dogs/image2.jpeg" width="160" height="160">
+                                    <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Cambiar foto</button></div>
                                 </div>
                             </div>
-                        </section>
-                        <section style="padding-top: 40px;">
-                            <div class="row justify-content-center" style="margin-right: 0px;margin-left: 0px;">
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/ÍCONOS/GESTIÓN_DEL_TIEMPO_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Gestión del tiempo</h4>
-                                        </div>
-                                    </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="text-primary fw-bold m-0">Modulos</h6>
                                 </div>
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/ÍCONOS/COMUNICACIÓN_ASERTIVA_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Comunicación Asertiva</h4>
-                                        </div>
+                                <div class="card-body">
+                                    <h4 class="small fw-bold">Server migration<span class="float-end">20%</span></h4>
+                                    <div class="progress progress-sm mb-3">
+                                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="visually-hidden">20%</span></div>
+                                    </div>
+                                    <h4 class="small fw-bold">Sales tracking<span class="float-end">40%</span></h4>
+                                    <div class="progress progress-sm mb-3">
+                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="visually-hidden">40%</span></div>
+                                    </div>
+                                    <h4 class="small fw-bold">Customer Database<span class="float-end">60%</span></h4>
+                                    <div class="progress progress-sm mb-3">
+                                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="visually-hidden">60%</span></div>
+                                    </div>
+                                    <h4 class="small fw-bold">Payout Details<span class="float-end">80%</span></h4>
+                                    <div class="progress progress-sm mb-3">
+                                        <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="visually-hidden">80%</span></div>
+                                    </div>
+                                    <h4 class="small fw-bold">Account setup<span class="float-end">Complete!</span></h4>
+                                    <div class="progress progress-sm mb-3">
+                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="visually-hidden">100%</span></div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row mb-3 d-none">
+                                <div class="col">
+                                    <div class="card text-white bg-primary shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card text-white bg-success shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-3">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 fw-bold">Configuracion de Usuario</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="username"><strong>Usuario</strong></label><input class="form-control" type="text" id="username" placeholder="" name="username" autocomplete="on" autofocus=""></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="email"><strong>Correo</strong></label><input class="form-control" type="email" id="email" placeholder="" name="email" autocomplete="on" autofocus=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombres</strong></label><input class="form-control" type="text" id="first_name" placeholder="" name="first_name" autofocus="" autocomplete="on"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="last_name"><strong>Apellidos</strong></label><input class="form-control" type="text" id="last_name" placeholder="" name="last_name" autocomplete="on" autofocus=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3"><a class="btn btn-primary btn-sm" role="button">Guardar Cambios</a></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="card shadow">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 fw-bold">Contacto</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="mb-3"><label class="form-label" for="address"><strong>Direccion</strong></label><input class="form-control" type="text" id="address" placeholder="" name="address"></div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="city"><strong>Ciudad</strong></label><input class="form-control" type="text" id="city" placeholder="" name="city"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="country"><strong>Pais</strong></label><input class="form-control" type="text" id="country" placeholder="" name="country"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Guardar Cambios</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                    <div class="card shadow mb-5"></div>
+                </div>
             </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+                </div>
+            </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-    <footer class="bg-white sticky-footer">
-        <div class="container my-auto">
-            <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
-        </div>
-    </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>

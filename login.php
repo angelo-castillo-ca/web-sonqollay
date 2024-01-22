@@ -1,6 +1,7 @@
 <?php
 // Incluye el archivo de conexión a la base de datos
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -25,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['id'];
 
             // Redirigir a la página del usuario
-            header("Location: usuario.php");
+            header("Location: user/index.php");
             exit();
         } else {
             // Credenciales inválidas, mostrar mensaje de error
@@ -36,10 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Credenciales incorrectas. Por favor, intenta de nuevo.";
     }
 
-    // Cerrar la conexión
+    // Cerrar la conexión después de usarla
     $stmt->close();
+    $conn->close();
 }
-
-// Cerrar la conexión
-$conn->close();
 ?>
