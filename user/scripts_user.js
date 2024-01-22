@@ -21,7 +21,7 @@ function data_liderazgo() {
 }
 
 function data_resiliencia() {
-    fetch('data_liderazgo.php', {
+    fetch('data_resiliencia.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ function data_resiliencia() {
 }
 
 function data_empatia() {
-    fetch('data_liderazgo.php', {
+    fetch('data_empatia.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ function data_empatia() {
 }
 
 function data_comuniacion_asertiva() {
-    fetch('data_liderazgo.php', {
+    fetch('data_comunicacion_asertiva.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ function data_comuniacion_asertiva() {
 }
 
 function data_gestion_tiempo() {
-    fetch('data_liderazgo.php', {
+    fetch('data_gestion_tiempo.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -112,14 +112,19 @@ var preguntasJSON;
 var indicePreguntaActual = 0;
 var respuestaSeleccionada = "";
 
+function cargarDatos(nombrejson){
+    fetch(nombrejson)
+    .then(response => response.json())
+    .then(data => {
+      preguntasJSON = data;
+      generarPreguntas();
+    })
+    .catch(error => console.error('Error al cargar el archivo JSON:', error));
+}
+    
+  
+
 // Cargar el JSON desde el archivo datos_liderazgo.json
-fetch('datos_liderazgo.json')
-  .then(response => response.json())
-  .then(data => {
-    preguntasJSON = data;
-    generarPreguntas();
-  })
-  .catch(error => console.error('Error al cargar el archivo JSON:', error));
 
 function generarPreguntas() {
     var preguntaActual = preguntasJSON[indicePreguntaActual];
