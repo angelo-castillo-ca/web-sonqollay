@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['id'];
 
             // Redirigir a la página del usuario
-            header("Location: user/index.php");
+            header("Location: user/confirmacion_ingreso.php");
             exit();
         } else {
             // Credenciales inválidas, mostrar mensaje de error

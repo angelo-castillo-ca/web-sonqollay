@@ -17,11 +17,12 @@ include 'session.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
+    <script src="scripts_user.js"></script>
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light" style="background: rgb(52,131,225);">
-        <div class="container-fluid"><a href="index.html"><img class="img-fluid" src="assets/img/sonqollay.png" width="171" height="29"></a>
+        <div class="container-fluid"><a href="index.html"><img class="img-fluid" src="assets/img/LOGO_VARIACIONES/LOGO_SONQOLLAY.png" width="171" height="29"></a>
             <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Buscar"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
             </form>
@@ -140,22 +141,31 @@ include 'session.php';
                                 <h1>Modulos</h1>
                             </div>
                             <div class="row justify-content-center" style="margin-right: 0px;margin-left: 0px;">
+                            <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
+                                <div onclick="data_liderazgo()" class="card clean-card text-center" style="cursor: pointer;">
+                                    <a href="preguntas.html">
+                                        <img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/LIDERAZGO_SONQO.png" alt="Liderazgo">
+                                    </a>
+                                    <div class="card-body info">
+                                        <h4 class="card-title">Liderazgo</h4>
+                                    </div>
+                                </div>
+                                </div>
                                 <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/LIDERAZGO_SONQO.png">
+                                    <div onclick="data_empatia()" class="card clean-card text-center" style="cursor: pointer;">
+                                        <a href="preguntas.html">
+                                            <img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/EMPATÍA_SONQO.png" alt="Empatía">
+                                        </a>
                                         <div class="card-body info">
-                                            <h4 class="card-title">Liderazgo</h4>
+                                            <h4 class="card-title">Empatía</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/EMPATÍA_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Empatia</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/RESILIENCIA_SONQO.png">
+                                    <div onclick="data_resiliencia()" class="card clean-card text-center" style="cursor: pointer;">
+                                        <a href="preguntas.html">
+                                            <img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/RESILIENCIA_SONQO.png" alt="Resiliencia">
+                                        </a>
                                         <div class="card-body info">
                                             <h4 class="card-title">Resiliencia</h4>
                                         </div>
@@ -166,17 +176,22 @@ include 'session.php';
                         <section style="padding-top: 40px;">
                             <div class="row justify-content-center" style="margin-right: 0px;margin-left: 0px;">
                                 <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/GESTIÓN_DEL_TIEMPO_SONQO.png">
+                                    <div onclick="data_gestion_tiempo()" class="card clean-card text-center" style="cursor: pointer;">
+                                        <a href="preguntas.html">
+                                            <img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/GESTIÓN_DEL_TIEMPO_SONQO.png" alt="Gestión del Tiempo">
+                                        </a>
                                         <div class="card-body info">
                                             <h4 class="card-title">Gestión del tiempo</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-lg-4" style="margin-top: 35px;">
-                                    <div class="card clean-card text-center"><img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/COMUNICACIÓN_ASERTIVA_SONQO.png">
-                                        <div class="card-body info">
-                                            <h4 class="card-title">Comunicación Asertiva</h4>
-                                        </div>
+                                <div onclick="datac_comunicacion_asertiva()" class="card clean-card text-center" style="cursor: pointer;">
+                                    <a href="preguntas.html">
+                                        <img class="img-fluid card-img-top w-100 d-block" src="assets/img/ÍCONOS/COMUNICACIÓN_ASERTIVA_SONQO.png" alt="Comunicación Asertiva">
+                                    </a>
+                                    <div class="card-body info">
+                                        <h4 class="card-title">Comunicación Asertiva</h4>
                                     </div>
                                 </div>
                             </div>
