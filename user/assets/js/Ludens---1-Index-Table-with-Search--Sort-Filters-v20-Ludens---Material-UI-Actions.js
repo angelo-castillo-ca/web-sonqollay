@@ -1,6 +1,6 @@
 "use strict";
 
-// RIPPLES EFFECT
+
 function ripplesEffect(e) {
     var waves, d, x, y;
     
