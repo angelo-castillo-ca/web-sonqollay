@@ -1,5 +1,5 @@
 (function() {
-  "use strict"; 
+  "use strict"; // Start of use strict
 
   var sidebar = document.querySelector('.sidebar');
   var sidebarToggles = document.querySelectorAll('#sidebarToggle, #sidebarToggleTop');
@@ -14,7 +14,7 @@
 
     for (var toggle of sidebarToggles) {
 
-      
+      // Toggle the side navigation
       toggle.addEventListener('click', function(e) {
         document.body.classList.toggle('sidebar-toggled');
         sidebar.classList.toggle('toggled');
@@ -27,7 +27,7 @@
       });
     }
 
-    
+    // Close any open menu accordions when window is resized below 768px
     window.addEventListener('resize', function() {
       var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
@@ -39,7 +39,7 @@
     });
   }
 
-  
+  // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
   
   var fixedNaigation = document.querySelector('body.fixed-nav .sidebar');
   
@@ -60,11 +60,11 @@
   
   if (scrollToTop) {
     
-    
+    // Scroll to top button appear
     window.addEventListener('scroll', function() {
       var scrollDistance = window.pageYOffset;
 
-      
+      //check if user is scrolling up
       if (scrollDistance > 100) {
         scrollToTop.style.display = 'block';
       } else {
@@ -73,4 +73,4 @@
     });
   }
 
-})(); 
+})(); // End of use strict
